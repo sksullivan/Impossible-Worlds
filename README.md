@@ -7,6 +7,7 @@ Roadmap:
   - [ ] Test teleporting in unity
   - [ ] Map element decomposition for movement (do penrose steps move when you’re not looking at them? if so, they can’t be static like the rest of the map)
   - [ ] Test Blender -> Unity pipeline again (scaling, navigability with VR)
+  - [ ] Specifically test interior collisions for mesh colliders from blender
 - [ ] Survey any real-life settings
   - [ ] Collect photos/list of desired textures
   - [ ] Decide on measurements (how high stairs are, ceiling heights, etc)
