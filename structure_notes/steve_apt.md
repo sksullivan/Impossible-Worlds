@@ -3,14 +3,14 @@ Entrance to Atrium & Museum
 Could start inside or outside, outside being more work.
 Let's start inside.
 Textures:
-  - White paint (wall/ceiling)
-  - Rubber Mat (floor)
-  - Cloth rug (floor)
-  - Black door frame
-  - Silver/grey metal door pieces
-  - Brown door
-  - Door #4 sprite
-  - Window texture
+  - White paint (wall/ceiling) (make manually)
+  - Rubber Mat (floor) (make manually)
+  - Cloth rug (floor) (source)
+  - Black door frame (make manually)
+  - Silver/grey metal door pieces (make manually)
+  - Brown door (make manually)
+  - Door #4 sprite (manual)
+  - Window texture (manual)
 
 Elements to consider (Focusing on stairs):
   - Railings
