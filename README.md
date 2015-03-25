@@ -64,3 +64,4 @@ Day 2 Notes:
 - To reimport something in Unity, you can't just hit "reimport," you must manually delete and re-add it to assets.
 - Blender models can just have multiple objects in them, which map to different objects and collision meshes in Unity. Good for the moving stairs problem.
 - Stairs, while modeled with blocks, must have sloped box colliders unfortunately.
+- Unity handles array modifiers in Blender automatically. Woohoo! Make sure that you normalize rotations and scaling for the object to which you apply an array modifier with "Apply - Scale & Rotation" when using object offsets.
