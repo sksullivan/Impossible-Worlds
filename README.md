@@ -32,7 +32,7 @@ Roadmap:
   - [ ] Maybe some wind or other atmospherics
 - [ ] Add sounds
 
-Day 1 Summary:
+Day 1 Notes:
 
 Mostly did work on the Blender -> Unity pipeline. Determined that the best way to model/do textures is to use Unity 4.7+ (not 4.6, which is on the lab machines) and Blender 2.74. The process is as follows:
 
@@ -55,3 +55,8 @@ Unity Part
 13. Finally set UV image as texture for the various Material__Bake materials.
 
 It's a pretty involved process, but produces pretty good looking results if you do it properly. UV unwrapping will be really useful for certain illusions. This does occasionally produce minor visible seams, strangely, but that could be an issue in Blender where culling isn't enabled, bad normals, etc. Not too big of a deal for now. Next steps are to work in entities, and to nail down how we're going to pull off the unity "tricks" we need for this project, i.e. teleporting, moving objects out of view, and doors.
+
+
+Day 2 Notes:
+
+ALWAYS, always check your normals. So many issues flipping things back and forth between Blender and Unity. Best way to UV unrap is with "Smart UV Project." To reimport something in Unity, you can't just hit "reimport," you must manually delete and re-add it to assets.
