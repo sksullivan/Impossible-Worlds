@@ -5,7 +5,7 @@ Roadmap:
 
 - [ ] Proof-of-concept work
   - [ ] Test teleporting in unity
-  - [ ] Map element decomposition for movement (do penrose steps move when you’re not looking at them? if so, they can’t be static like the rest of the map)
+  - [x] Map element decomposition for movement (do penrose steps move when you’re not looking at them? if so, they can’t be static like the rest of the map)
   - [x] Test Blender -> Unity pipeline again (scaling, navigability with VR)
   - [x] Specifically test interior collisions for mesh colliders from blender
 - [ ] Survey any real-life settings
@@ -59,4 +59,7 @@ It's a pretty involved process, but produces pretty good looking results if you 
 
 Day 2 Notes:
 
-ALWAYS, always check your normals. So many issues flipping things back and forth between Blender and Unity. Best way to UV unrap is with "Smart UV Project." To reimport something in Unity, you can't just hit "reimport," you must manually delete and re-add it to assets.
+- ALWAYS, always check your normals. So many issues flipping things back and forth between Blender and Unity.
+- Best way to UV unrap is with "Smart UV Project."\
+- To reimport something in Unity, you can't just hit "reimport," you must manually delete and re-add it to assets.
+- Blender models can just have multiple objects in them, which map to different objects and collision meshes in Unity. Good for the moving stairs problem.
