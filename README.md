@@ -63,3 +63,4 @@ Day 2 Notes:
 - Best way to UV unrap is with "Smart UV Project."\
 - To reimport something in Unity, you can't just hit "reimport," you must manually delete and re-add it to assets.
 - Blender models can just have multiple objects in them, which map to different objects and collision meshes in Unity. Good for the moving stairs problem.
+- Stairs, while modeled with blocks, must have sloped box colliders unfortunately.
