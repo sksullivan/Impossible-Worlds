@@ -77,3 +77,7 @@ Today's main focus involved the portal effect needed for the juxtaposed worlds. 
 7. Unckeck the appropriate layer from the list of displayed layers (culling, I think?) on the right and left eye anchors in the OVRPlayerController.
 
 Finally, after making the surrogate camera pair's motion mirror the OVRPlayerController, a correct-depth result was achieved. This portal, however, results in the portal's contents being displayed at the wrong height in the visual field. It just looks wrong, somehow. Tomorrow I will attempt to correct this by making the aforementioned planes always tangent to the ray of the player's current looking direction.
+
+Day 3 Notes:
+
+Haven't tried the perpendicular render texture approach yet. Tried another method for world juxtaposition where normals are flipped (making certain surfaces visiable and invisible) based on player location. While this would work, in practice it's simply way to complicated to pull off for the complexity we're going for. Will try some more camera techniques.
