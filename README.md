@@ -60,8 +60,20 @@ It's a pretty involved process, but produces pretty good looking results if you 
 Day 2 Notes:
 
 - ALWAYS, always check your normals. So many issues flipping things back and forth between Blender and Unity.
-- Best way to UV unrap is with "Smart UV Project."\
+- Best way to UV unrap is with "Smart UV Project."
 - To reimport something in Unity, you can't just hit "reimport," you must manually delete and re-add it to assets.
 - Blender models can just have multiple objects in them, which map to different objects and collision meshes in Unity. Good for the moving stairs problem.
 - Stairs, while modeled with blocks, must have sloped box colliders unfortunately.
 - Unity handles array modifiers in Blender automatically. Woohoo! Make sure that you normalize rotations and scaling for the object to which you apply an array modifier with "Apply - Scale & Rotation" when using object offsets.
+
+Today's main focus involved the portal effect needed for the juxtaposed worlds. This, unfortunately, has turned out to be very complex. I first tried the internet's suggestion to use a modified mirror to render a remote camera's output on a plane via a shader. I couldn't get this to work at all, and furthermore, depth perception was not addressed by this approach. Next, I used render textures to place what a camera sees onto a plane via a material, which suffered from the same problem as the first method. Finally, my last attempt involved the following:
+
+1. Place a camera facing the subject of the portal.  
+2. Place another camera facing the subject, the IPD to the right of the first camera.  
+3. Send the output of each camera to two render textures, left and right.
+4. Place two planes in the same location, for the portal.
+5. Texture one plane with the left render texture and the other with the right render texture.
+6. Make each plane visible only to the proper eye by moving the right onto a "RIGHT EYE ONLY" layer in Unity, and the left onto a "LEFT EYE ONLY" layer.
+7. Unckeck the appropriate layer from the list of displayed layers (culling, I think?) on the right and left eye anchors in the OVRPlayerController.
+
+Finally, after making the surrogate camera pair's motion mirror the OVRPlayerController, a correct-depth result was achieved. This portal, however, results in the portal's contents being displayed at the wrong height in the visual field. It just looks wrong, somehow. Tomorrow I will attempt to correct this by making the aforementioned planes always tangent to the ray of the player's current looking direction.
