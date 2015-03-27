@@ -83,3 +83,11 @@ Day 3 Notes:
 Haven't tried the perpendicular render texture approach yet. Tried another method for world juxtaposition where normals are flipped (making certain surfaces visiable and invisible) based on player location. While this would work, in practice it's simply way to complicated to pull off for the complexity we're going for. Will try some more camera techniques.
 
 So at the end of the day it looks like the best course of action is to avoid the "looking through a portal" scenario. It can probably be pulled off with correct depth, parallax, etc, but not in this week. Instead, I've devised a way to fake the juxtaposed worlds trick with some simple trigonometry but complex control logic. TIL game performance takes a massive hit in Unity if you add too many debug statements.
+
+So everything for the juxtaposed worlds illusion is working, and it works as follows:
+
+There is a scene-scoped RoomDisplayManager. This object keeps track of each room and displays everything in the room based on the location of the player. It listens for enter and exit notifications from triggers attached to each door's entrance and exit. This information allows the RoomDisplayManager to determine if the player is in a room, and if so, which one. Based on this information, the RDM will tell the current room occupied by the player to show it's contents, and for all other rooms to hide theirs. The RDM also shows a plane that blocks the doors for other adjacent rooms and makes them invisible.
+
+It gets slightly more complex when the player is not in a room; in this case the RDM must determine what the player should be able to see. Using empty objects to mark the left and right edges of each room's entrance, the RDM draws rays in the 2D plane from the player to these points, creating a circle sector of what the player can see inside each room. Then the RDM simply displays each object if _any part of it_ falls within one of the visibility sectors.
+
+So that's that! Hooray for geometry. There are a few limitations, i.e. the doors must be a certain width apart, and the objects in each room cannot be very large AND right near dividers between doors. But other than that it works pretty well and looks nice. Onto the projected text illusion and the penrose steps.
