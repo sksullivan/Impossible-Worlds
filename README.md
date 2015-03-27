@@ -3,7 +3,7 @@ VR Demo for mystery and optical illusions.
 
 Roadmap:
 
-- [ ] Proof-of-concept work
+- [x] Proof-of-concept work
   - [x] Test teleporting in unity
   - [x] Map element decomposition for movement (do penrose steps move when you’re not looking at them? if so, they can’t be static like the rest of the map)
   - [x] Test Blender -> Unity pipeline again (scaling, navigability with VR)
