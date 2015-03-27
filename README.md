@@ -81,3 +81,5 @@ Finally, after making the surrogate camera pair's motion mirror the OVRPlayerCon
 Day 3 Notes:
 
 Haven't tried the perpendicular render texture approach yet. Tried another method for world juxtaposition where normals are flipped (making certain surfaces visiable and invisible) based on player location. While this would work, in practice it's simply way to complicated to pull off for the complexity we're going for. Will try some more camera techniques.
+
+So at the end of the day it looks like the best course of action is to avoid the "looking through a portal" scenario. It can probably be pulled off with correct depth, parallax, etc, but not in this week. Instead, I've devised a way to fake the juxtaposed worlds trick with some simple trigonometry but complex control logic. TIL game performance takes a massive hit in Unity if you add too many debug statements.
