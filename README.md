@@ -14,7 +14,7 @@ Roadmap:
   - [ ] Compile rough list of what entities (small, high-poly map detail items) are needed
 - [ ] Create final floorplans
   - [x] My apt bldg
-  - [ ] Atrium/static gallery, video gallery (modeled after AIC)
+  - [x] Atrium/static gallery, video gallery (modeled after AIC)
   - [ ] Room of other worlds, including text projection centerpiece
   - [ ] Escher’s Waterfall
   - [ ] Penrose Steps
