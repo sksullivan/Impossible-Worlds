@@ -8,6 +8,7 @@ Roadmap:
   - [x] Map element decomposition for movement (do penrose steps move when you’re not looking at them? if so, they can’t be static like the rest of the map)
   - [x] Test Blender -> Unity pipeline again (scaling, navigability with VR)
   - [x] Specifically test interior collisions for mesh colliders from blender
+  - [x] Test text projection with UV mapping
 - [ ] Survey any real-life settings
   - [ ] Collect photos/list of desired textures
   - [ ] Decide on measurements (how high stairs are, ceiling heights, etc)
@@ -91,3 +92,7 @@ There is a scene-scoped RoomDisplayManager. This object keeps track of each room
 It gets slightly more complex when the player is not in a room; in this case the RDM must determine what the player should be able to see. Using empty objects to mark the left and right edges of each room's entrance, the RDM draws rays in the 2D plane from the player to these points, creating a circle sector of what the player can see inside each room. Then the RDM simply displays each object if _any part of it_ falls within one of the visibility sectors.
 
 So that's that! Hooray for geometry. There are a few limitations, i.e. the doors must be a certain width apart, and the objects in each room cannot be very large AND right near dividers between doors. But other than that it works pretty well and looks nice. Onto the projected text illusion and the penrose steps.
+
+Day 4 Notes:
+
+The projected text illusion works well using Blender's extremely convenient UV unwrapping method, "Project from view" and a flat image of text. Will look very good in practice.
