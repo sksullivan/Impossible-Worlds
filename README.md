@@ -96,3 +96,7 @@ So that's that! Hooray for geometry. There are a few limitations, i.e. the doors
 Day 4 Notes:
 
 The projected text illusion works well using Blender's extremely convenient UV unwrapping method, "Project from view" and a flat image of text. Will look very good in practice.
+
+Not a terribly productive day, unfortunately, do to some unforseen obligations. I did manage to do a good proof of concept for the project text on a complex surface that can only be read legibly form one direction which was not only easy to pull off with UV unwrapping, but looked surprisingly good.
+
+Spent some time making minor modifications to the atrium model. Tested lighting, simple particle generators and adding a skybox. Struggled several times with unity not transfering project files from one PC to another without mangiling everything. Makes me a little nervous.
