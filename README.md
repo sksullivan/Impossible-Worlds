@@ -104,3 +104,9 @@ Spent some time making minor modifications to the atrium model. Tested lighting,
 Day 5 Notes:
 
 I noticed a little lighting issue yesterday where light would bleed through places where planes intersected. Apparently, all walls need to be doubel sided, i.e. have thickness to them to properly block light.
+
+Worked on adding detail to my apt model. Learned about skyboxes in Unity.
+
+Day 6 Notes:
+
+Textured the kitchen part of my apt.
